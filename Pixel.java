@@ -68,4 +68,8 @@ public class Pixel {
 		this.colour.setR(b);
 	}
 	
+	public String writePixel() {
+		return new String("Position: " + this.x + " " + this.y + ", " + this.colour.writeColour());
+	}
+	
 }

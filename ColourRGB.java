@@ -81,4 +81,8 @@ public class ColourRGB {
 		this.b = b;
 	}
 	
+	public String writeColour() {
+		return new String("Colour: " + this.r + " " + this.g + " " + this.b);
+	}
+	
 }
