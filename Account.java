@@ -24,8 +24,8 @@ public class Account {
 	public void withdrawal(float c) throws InsufficientBalanceException, NegativeOrNullDepositException {
 		if (this.balance < c) {
 			throw new InsufficientBalanceException();
-		} else if (c < 0) {
-			throw new NegativeOrNullDepositException("Cannot withdraw a negative ammount");
+		} else if (c <= 0) {
+			throw new NegativeOrNullDepositException("Cannot withdraw a negative or null ammount");
 		}
 		this.balance -= c;
 	}
