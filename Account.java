@@ -14,7 +14,10 @@ public class Account {
 		this.balance += c;
 	}
 	
-	public void withdrawal(float c) {
+	public void withdrawal(float c) throws InsufficientBalanceException {
+		if (this.balance < c) {
+			throw new InsufficientBalanceException();
+		}
 		this.balance -= c;
 	}
 
